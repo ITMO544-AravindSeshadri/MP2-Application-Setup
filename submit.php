@@ -68,7 +68,7 @@ $MP2Sns = new Aws\Sns\SnsClient([
     'region'  => 'us-west-2'
 ]);
 $MP2Arn = MP2Sns->createTopic([
-'Name' => 'AravindMP2',
+'Name' => 'aravindmp2',
 ]);
 header("location: gallery.php");
 echo "Record successfully inserted!";
