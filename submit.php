@@ -75,12 +75,12 @@ $mp2sub = $mp2sns->subscribe([
 'Protocol' => 'email',
 'TopicArn' => $mp2arn['TopicArn'],
 ]);
-$mp2sub = $mp2sns->setTopicAttributes([
+$mp2setattr = $mp2sns->setTopicAttributes([
 'AttributeName' => 'DisplayName',
 'AttributeValue' => 'aravindmp2',
 'TopicArn' => $mp2arn['TopicArn'],
 ]);
-$mp2sub = $mp2sns->publish([
+$mp2pub = $mp2sns->publish([
 'Message' => 'Welcome to Aws e-mail service.',
 'TopicArn' => $mp2arn['TopicArn'],
 ]);
