@@ -71,9 +71,9 @@ $mp2arn = $mp2sns->createTopic([
 'Name' => 'aravindmp2',
 ]);
 $mp2sub = $mp2sns->subscribe([
-'Endpoint' => '$email',
+'Endpoint' => $email,
 'Protocol' => 'email',
-'TopicArn' => '$mp2arn',
+'TopicArn' => $mp2arn,
 ]);
 header("location: gallery.php");
 echo "Record successfully inserted!";
