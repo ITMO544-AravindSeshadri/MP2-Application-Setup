@@ -63,11 +63,11 @@ if (!mysqli_query($link,$sql))
 {
 die("Error: " . mysqli_error($link));
 }
-$MP2_Sns = new Aws\Sns\SnsClient([
+$MP2Sns = new Aws\Sns\SnsClient([
     'version' => 'latest',
     'region'  => 'us-west-2'
 ]);
-$MP2_Arn = MP2_Sns->createTopic([
+$MP2Arn = MP2Sns->createTopic([
 'Name' => 'AravindMP2',
 ]);
 header("location: gallery.php");
