@@ -70,6 +70,11 @@ $mp2sns = new Aws\Sns\SnsClient([
 $mp2arn = $mp2sns->createTopic([
 'Name' => 'aravindmp2',
 ]);
+$mp2sub = $mp2sns->subscribe([
+'Endpoint' => '$email',
+'Protocol' => 'email',
+'TopicArn' => '$mp2arn',
+]);
 header("location: gallery.php");
 echo "Record successfully inserted!";
 $link->real_query("SELECT * FROM MP1");
