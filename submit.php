@@ -81,7 +81,7 @@ $mp2setattr = $mp2sns->setTopicAttributes([
 'TopicArn' => $mp2arn['TopicArn'],
 ]);
 $mp2pub = $mp2sns->publish([
-'Message' => 'Welcome to Aws e-mail service.',
+'Message' => 'The image you had selected has been uploaded.',
 'TopicArn' => $mp2arn['TopicArn'],
 ]);
 header("location: gallery.php");
